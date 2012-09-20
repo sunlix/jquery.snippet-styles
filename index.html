@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Syntax Highlighting Demo</title>
+
+		<link type="text/css" rel="stylesheet" href="./css/jquery.snippet.css" />
+		<style type="text/css">
+			.sticky { position: fixed; top: 0; z-index: 10; background-color: #fff;}
+		</style>
+
+	</head>
+	<body>
+
+		<h1>Syntax Highlighting Demo</h1>
+
+		<div class="sticky">
+			<label for="r">Rotate Style</label>
+			<select id="r">
+				<option>symfony</option>
+				<option>monokai</option>
+			</select>
+		</div>
+
+		<h2>HTML</h2>
+		<pre class="html">
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"/&gt;
+
+  &lt;title&gt;&lt;/title&gt;<br>  &lt;meta name=&quot;description&quot; content=&quot;&quot;/&gt;<br>  &lt;meta name=&quot;author&quot; content=&quot;&quot;/&gt;
+
+  &lt;!-- mobile viewport optimisation --&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />
+  &lt;!-- stylesheets --&gt;<br>  &lt;link rel=&quot;stylesheet&quot; href=&quot;yaml/core/base.min.css&quot; type=&quot;text/css&quot;/&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/styles.css&quot; type=&quot;text/css&quot;/&gt;
+
+  &lt;!--[if lte IE 7]&gt;<br />  &lt;link rel=&quot;stylesheet&quot; href=&quot;yaml/core/iehacks.min.css&quot; type=&quot;text/css&quot;/&gt;<br />  &lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+		<h2>CSS</h2>
+		<pre class="css">
+/*---------- typical Styles ---------*/
+.sh_typical{background:none; padding:0; margin:0; border:0 none;}
+.sh_typical .sh_sourceCode{background-color:#fff;color:#000;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_keyword{color:#00f;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_type{color:#00f;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_string{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_regexp{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_specialchar{color:#C42DA8;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_comment{color:#666;font-weight:normal;font-style:italic;}
+.sh_typical .sh_sourceCode .sh_number{color:#a900a9;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_preproc{color:#00b800;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_symbol{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_function{color:#000;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_cbracket{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_url{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_date{color:#00f;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_time{color:#00f;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_file{color:#00f;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_ip{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_name{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_variable{color:#ec7f15;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_oldfile{color:#C42DA8;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_newfile{color:#f00;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_difflines{color:#00f;font-weight:bold;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_selector{color:#ec7f15;font-weight:normal;font-style:normal;}
+.sh_typical .sh_sourceCode .sh_property{color:#00f;font-weight:bold;font-style:normal;}
+sh_typical .sh_sourceCode .sh_value{color:#f00;font-weight:normal;font-style:normal;}
+
+/*-------- Snippet Base Styles ----------*/
+.snippet-wrap {position:relative;}
+*:first-child+html .snippet-wrap {display:inline-block;}
+* html .snippet-wrap {display:inline-block;}
+.snippet-reveal{text-decoration:underline;}
+.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide {position:absolute; top:10px; right:15px; font-size:.9em;z-index:1;background-color:transparent;}
+.snippet-wrap .snippet-hide {top:auto; bottom:10px;}
+*:first-child+html .snippet-wrap .snippet-hide {bottom:25px;}
+* html .snippet-wrap .snippet-hide {bottom:25px;}
+.snippet-wrap .snippet-menu pre, .snippet-wrap .snippet-hide pre {background-color:transparent; margin:0; padding:0;}
+.snippet-wrap .snippet-menu a, .snippet-wrap .snippet-hide a {padding:0 5px; text-decoration:underline;}
+.snippet-wrap pre.sh_sourceCode{padding:1em;line-height:1.8em;overflow:auto;position:relative;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+box-shadow: 2px 2px 5px #000;
+-moz-box-shadow: 2px 2px 5px #000;
+-webkit-box-shadow: 2px 2px 5px #000;}
+.snippet-wrap pre.snippet-textonly {padding:2em;}
+*:first-child+html .snippet-wrap pre.snippet-formatted {padding:2em 1em;}
+* html .snippet-wrap pre.snippet-formatted {padding:2em 1em;}
+.snippet-reveal pre.sh_sourceCode {padding:.5em 1em; text-align:right;}
+.snippet-wrap .snippet-num li{padding-left:1.5em;}
+.snippet-wrap .snippet-no-num{list-style:none; padding:.6em 1em; margin:0;}
+.snippet-wrap .snippet-no-num li {list-style:none; padding-left:0;}
+.snippet-wrap .snippet-num {margin:1em 0 1em 1em; padding-left:3em;}
+.snippet-wrap .snippet-num li {list-style:decimal-leading-zero outside none;}
+.snippet-wrap .snippet-no-num li.box {padding:0 6px; margin-left:-6px;}
+.snippet-wrap .snippet-num li.box {border:1px solid; list-style-position:inside; margin-left:-3em; padding-left:6px;}
+*:first-child+html .snippet-wrap .snippet-num li.box {margin-left:-2.4em;}
+* html .snippet-wrap .snippet-num li.box {margin-left:-2.4em;}
+.snippet-wrap li.box-top {border-width:1px 1px 0 !important;}
+.snippet-wrap li.box-bot {border-width:0 1px 1px !important;}
+.snippet-wrap li.box-mid {border-width:0 1px !important;}
+.snippet-wrap .snippet-num li .box-sp {width:18px; display:inline-block;}
+*:first-child+html .snippet-wrap .snippet-num li .box-sp {width:27px;}
+* html .snippet-wrap .snippet-num li .box-sp {width:27px;}
+.snippet-wrap .snippet-no-num li.box {border:1px solid;}
+.snippet-wrap .snippet-no-num li .box-sp {display:none;}</pre>
+
+		<h2>JavaScript</h2>
+		<pre class="javascript">
+(function ($) {
+	"use strict";
+
+	$.fn.gsaautocomplete = function (opts) {
+		var options = this.extend({
+			"url": "/suggest.php",
+			"ulId": "suggest-results"
+		}, opts);
+
+		/**
+		 * Plugin Begin
+		 * turn plugin on all matched nodes
+		 */
+		return this.each(function () {
+
+			/**
+			 * globals
+			 */
+			var $this, $list, $keys, $ikeys, $i, $v;
+			$this = $(this);
+			$v = $this.val();
+			$list = $("#" + options.ulId);
+			$keys = [27, 38, 40];
+			$i = 0;
+
+			/**
+			 * core
+			 */
+			$this.attr({
+				"autocomplete": "off",
+				"aria-autocomplete": "list",
+				"aria-live": "polite",
+				"aria-controls": options.ulId
+			}).on({
+				keyup: function (e) {
+
+					if ($.inArray(e.keyCode, $keys) === -1) {
+						if ($v !== $this.val()) {
+
+							$.post(options.url, {
+
+								"q": $this.val()
+
+							}, function (data) {
+
+								$list.remove();
+
+								if (data.results.length > 0) {
+									var items = [];
+
+									for (var i in data.results) {
+										items.push('&lt;li role="listitem"&gt;' + data.results[i].name + '&lt;/li&gt;');
+									}
+
+									$this.after(
+									$("&lt;ul&gt;").attr({
+										"id": options.ulId,
+										"role": "list"
+									}).html(items.join("")));
+									$list = $("#" + options.ulId);
+								}
+
+								$list.on("click", "li", function () {
+									$this.val($(this).text());
+									$list.remove();
+								});
+
+								$("*").not("form *").on("click", function () {
+									$list.remove();
+								});
+
+							}, "json"); //post
+
+						}
+					}
+
+					if ($.inArray(e.keyCode, $keys) !== -1) {
+						var len, lis;
+						len = $list.children().length;
+						lis = $list.children();
+
+						switch (e.keyCode) {
+						case 27:
+							// KEY_ESC
+							$list.remove();
+							$i = -1;
+							break;
+						case 38:
+							// KEY_UP
+							if ($i === 0 || $i === -1) {
+								$i = len - 1;
+							} else {
+								$i--;
+							}
+							break;
+						case 40:
+							// KEY_DOWN
+							if ($i === len - 1) {
+								$i = 0;
+							} else {
+								$i++;
+							}
+							break;
+						default:
+							break;
+						}
+						lis.each(function (i) {
+							if (i === $i) {
+								$(this).addClass("active");
+								$this.val(this.textContent);
+							} else {
+								$(this).removeClass("active");
+							}
+						});
+					} else {
+						$i = -1;
+					}
+					$v = $this.val();
+				} // keyup
+			}); // $this chain
+		}); //this.each
+	}; // $.fn
+})(jQuery); //$closure</pre>
+
+		<h2>PHP</h2>
+		<pre class="php">
+require_once 'Zend.php';
+require_once 'Zend/Uri/Exception.php';
+require_once 'Zend/Uri/Http.php';
+require_once 'Zend/Uri/Mailto.php';
+
+abstract class Zend_Uri
+{
+
+	/**
+	* Return a string representation of this URI.
+	*
+	* @see     getUri()
+	* @return  string
+	*/
+	public function __toString()
+	{
+		return $this->getUri();
+	}
+
+	static public function factory($uri = 'http')
+	{
+		$uri = explode(':', $uri, 2);
+		$scheme = strtolower($uri[0]);
+		$schemeSpecific = isset($uri[1]) ? $uri[1] : '';
+
+		// Security check: $scheme is used to load a class file,
+		// so only alphanumerics are allowed.
+		if (!ctype_alnum($scheme)) {
+			throw new Zend_Uri_Exception('Illegal scheme');
+		}
+	}
+}</pre>
+
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/jquery.snippet.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var p = $("pre");
+				var r = $("#r");
+
+				r.on("change", function () {
+					$.each(p, function () {
+						$(this).snippet($(this).attr("class"), {style:r.val()});
+					});
+				}).change();
+			});
+		</script>
+	</body>
+</html>
