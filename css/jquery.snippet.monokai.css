@@ -1,0 +1,27 @@
+/*---------- monokai Styles ---------*/
+.sh_monokai{background:none; padding:0; margin:0; border:0 none;}
+.sh_monokai .sh_sourceCode{background-color:#272822;color:#DDD;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_keyword{color:#F92672;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_type{color:#A6E22E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_string{color:#ECE47E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_regexp{color:#ECE47E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_specialchar{color:#75715E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_comment{color:#75715E;font-weight:normal;font-style:italic;}
+.sh_monokai .sh_sourceCode .sh_number{color:#C48CFF;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_preproc{color:#F92672;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_symbol{color:#F92672;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_function{color:#66D9EF;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_cbracket{color:#FFF;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_url{color:#F92672;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_date{color:#F92672;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_time{color:#F92672;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_file{color:#F92672;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_ip{color:#F92672;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_name{color:#F92672;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_variable{color:#FFF;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_oldfile{color:#75715E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_newfile{color:#f00;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_difflines{color:#00f;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_selector{color:#A6E22E;font-weight:normal;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_property{color:#66D9EF;font-weight:bold;font-style:normal;}
+.sh_monokai .sh_sourceCode .sh_value{color:#C48CFF;font-weight:normal;font-style:normal;}

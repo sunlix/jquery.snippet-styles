@@ -1,0 +1,27 @@
+/*---------- symfony Styles ---------*/
+.sh_symfony{background:none; padding:0; margin:0; border:0 none;}
+.sh_symfony .sh_sourceCode{background-color:#232125;color:#fff;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_keyword{color:#FF8400;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_type{color:#6c71c4;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_string{color:#56DB3A;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_regexp{color:#B729D9;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_specialchar{color:#75715E;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_comment{color:#B729D9;font-weight:normal;font-style:italic;}
+.sh_symfony .sh_sourceCode .sh_number{color:#1299DA;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_preproc{color:#FF8400;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_symbol{color:#999;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_function{color:#fff;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_cbracket{color:#999;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_url{color:#dc322f;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_date{color:#dc322f;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_time{color:#dc322f;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_file{color:#aaa;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_ip{color:#dc322f;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_name{color:#dc322f;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_variable{color:#2aa198;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_oldfile{color:#aaa;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_newfile{color:#aaa;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_difflines{color:#aaa;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_selector{color:#FF8400;font-weight:normal;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_property{color:#6c71c4;font-weight:bold;font-style:normal;}
+.sh_symfony .sh_sourceCode .sh_value{color:#56DB3A;font-weight:normal;font-style:normal;}
