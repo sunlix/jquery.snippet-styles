@@ -117,130 +117,78 @@ box-shadow: 2px 2px 5px #000;
 .snippet-wrap .snippet-no-num li .box-sp {display:none;}</pre>
 
 		<h2>JavaScript</h2>
-		<pre class="javascript">
-(function ($) {
-	"use strict";
+		<pre class="javascript">/**
+ * "Yet Another Multicolumn Layout" - YAML CSS Framework
+ *
+ * (en) Workaround for IE8 und Webkit browsers to fix focus problems when using skiplinks
+ * (de) Workaround für IE8 und Webkit browser, um den Focus zu korrigieren, bei Verwendung von Skiplinks
+ *
+ * @note			inspired by Paul Ratcliffe's article
+ *					http://www.communis.co.uk/blog/2009-06-02-skip-links-chrome-safari-and-added-wai-aria
+ *                  Many thanks to Mathias Schäfer (http://molily.de/) for his code improvements
+ *
+ * @copyright       Copyright 2005-2012, Dirk Jesse
+ * @license         CC-BY 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-CDL (http://www.yaml.de/license.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         4.0+
+ * @revision        $Revision: 617 $
+ * @lastmodified    $Date: 2012-01-05 23:56:54 +0100 (Do, 05 Jan 2012) $
+ */
 
-	$.fn.gsaautocomplete = function (opts) {
-		var options = this.extend({
-			"url": "/suggest.php",
-			"ulId": "suggest-results"
-		}, opts);
+(function () {
+	var YAML_focusFix = {
+		skipClass : 'ym-skip',
 
-		/**
-		 * Plugin Begin
-		 * turn plugin on all matched nodes
-		 */
-		return this.each(function () {
+		init : function () {
+			var userAgent = navigator.userAgent.toLowerCase();
+			var	is_webkit = userAgent.indexOf('webkit') > -1;
+			var	is_ie = userAgent.indexOf('msie') > -1;
 
-			/**
-			 * globals
-			 */
-			var $this, $list, $keys, $ikeys, $i, $v;
-			$this = $(this);
-			$v = $this.val();
-			$list = $("#" + options.ulId);
-			$keys = [27, 38, 40];
-			$i = 0;
+			if (is_webkit || is_ie) {
+				var body = document.body,
+					handler = YAML_focusFix.click;
+				if (body.addEventListener) {
+					body.addEventListener('click', handler, false);
+				} else if (body.attachEvent) {
+					body.attachEvent('onclick', handler);
+				}
+			}
+		},
 
-			/**
-			 * core
-			 */
-			$this.attr({
-				"autocomplete": "off",
-				"aria-autocomplete": "list",
-				"aria-live": "polite",
-				"aria-controls": options.ulId
-			}).on({
-				keyup: function (e) {
+		trim : function (str) {
+			return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+		},
 
-					if ($.inArray(e.keyCode, $keys) === -1) {
-						if ($v !== $this.val()) {
+		click : function (e) {
+			e = e || window.event;
+			var target = e.target || e.srcElement;
+			var a = target.className.split(' ');
 
-							$.post(options.url, {
+			for (var i=0; i &lt; a.length; i++) {
+				var cls = YAML_focusFix.trim(a[i]);
+				if ( cls === YAML_focusFix.skipClass) {
+					YAML_focusFix.focus(target);
+					break;
+				}
+			}
+		},
 
-								"q": $this.val()
-
-							}, function (data) {
-
-								$list.remove();
-
-								if (data.results.length > 0) {
-									var items = [];
-
-									for (var i in data.results) {
-										items.push('&lt;li role="listitem"&gt;' + data.results[i].name + '&lt;/li&gt;');
-									}
-
-									$this.after(
-									$("&lt;ul&gt;").attr({
-										"id": options.ulId,
-										"role": "list"
-									}).html(items.join("")));
-									$list = $("#" + options.ulId);
-								}
-
-								$list.on("click", "li", function () {
-									$this.val($(this).text());
-									$list.remove();
-								});
-
-								$("*").not("form *").on("click", function () {
-									$list.remove();
-								});
-
-							}, "json"); //post
-
-						}
-					}
-
-					if ($.inArray(e.keyCode, $keys) !== -1) {
-						var len, lis;
-						len = $list.children().length;
-						lis = $list.children();
-
-						switch (e.keyCode) {
-						case 27:
-							// KEY_ESC
-							$list.remove();
-							$i = -1;
-							break;
-						case 38:
-							// KEY_UP
-							if ($i === 0 || $i === -1) {
-								$i = len - 1;
-							} else {
-								$i--;
-							}
-							break;
-						case 40:
-							// KEY_DOWN
-							if ($i === len - 1) {
-								$i = 0;
-							} else {
-								$i++;
-							}
-							break;
-						default:
-							break;
-						}
-						lis.each(function (i) {
-							if (i === $i) {
-								$(this).addClass("active");
-								$this.val(this.textContent);
-							} else {
-								$(this).removeClass("active");
-							}
-						});
-					} else {
-						$i = -1;
-					}
-					$v = $this.val();
-				} // keyup
-			}); // $this chain
-		}); //this.each
-	}; // $.fn
-})(jQuery); //$closure</pre>
+		focus : function (link) {
+			if (link.href) {
+				var href = link.href,
+					id = href.substr(href.indexOf('#') + 1),
+					target = document.getElementById(id);
+				if (target) {
+					target.setAttribute("tabindex", "-1");
+					target.focus();
+				}
+			}
+		}
+	};
+	YAML_focusFix.init();
+})();</pre>
 
 		<h2>PHP</h2>
 		<pre class="php">
